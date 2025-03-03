@@ -231,7 +231,7 @@ st.write("Electricity vs Weather Analysis")
 # 1. NOAA API Configuration & Data Fetching (with caching)
 # =============================================================================
 
-NOAA_API_TOKEN = os.getenv("NCEI_API_TOKEN", "YOUR_API_KEY_HERE")  # Replace with your API key or use Streamlit secrets
+NOAA_API_TOKEN = os.getenv("NCEI_API_TOKEN", "CCSqekrmuGGNtWRrttiTKdVifdRuJpSi")  # Replace with your API key or use Streamlit secrets
 NOAA_BASE_URL = "https://www.ncdc.noaa.gov/cdo-web/api/v2/data"
 NOAA_DATASET_ID = "GHCND"
 NOAA_LOCATION_ID = "FIPS:FI"
