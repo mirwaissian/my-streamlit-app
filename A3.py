@@ -260,7 +260,7 @@ def fetch_noaa_data(start_date, end_date, token=NOAA_API_TOKEN,
 st.sidebar.title("Navigation")
 page = st.sidebar.radio(
     "Select a Page",
-    ["Data Overview", "Time Series Visualizations", "Regression Analysis", "Polynomial Regression", "Residual Diagnostics"],
+    ["Data Overview", "Time Series Visualizations", "Regression Analysis", "Polynomial Regression", "Residual Diagnostics", "External Discussion"],
     key="page_nav"
 )
 
@@ -739,6 +739,30 @@ elif page == "Residual Diagnostics":
         st.write("Residuals are not normally distributed (p < 0.05).")
     else:
         st.write("Residuals appear normally distributed (p >= 0.05).")
+
+
+# =============================================================================
+# Page: External Discussion
+# =============================================================================
+elif page == "External Discussion":
+    st.header("Discussion: External Factors and Data Variability")
+    st.markdown("""
+    **External Factors Influencing Electricity Prices:**
+
+    - **Global Events & Energy Markets:** Electricity prices can be influenced by events such as geopolitical tensions, natural disasters, or shifts in international energy policies. For example, disruptions in oil supply or sudden changes in energy demand can indirectly impact electricity prices.
+    
+    - **Local Weather Conditions:** Weather variables like temperature, wind speed, and rainfall affect electricity consumption (e.g., heating or cooling demand). Extreme weather conditions can cause significant fluctuations in prices.
+    
+    **Data Variability and Filtering:**
+
+    - The dataset may capture periods with high variability due to disturbances or market anomalies.
+    - Filtering the data or segmenting it into smaller periods can help analyze correlations more accurately and mitigate the impact of outliers.
+    
+    **Potential Enhancements:**
+
+    - Incorporating additional data sources (e.g., alternative weather datasets or electricity consumption data) could provide a more robust analysis.
+    - Experimenting with different filtering techniques or more advanced regression models might further illuminate the relationship between weather conditions and electricity prices.
+    """)
 
 # =============================================================================
 # Page: Testing Price Shifting
